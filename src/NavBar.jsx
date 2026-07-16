@@ -3,51 +3,52 @@ import { Icon } from '@iconify/react';
 
 function NavBar() {
   return (
-    <nav className="fixed inset-x-0 top-8 z-50 flex items-center justify-between px-10 py-4 mx-auto max-w-6xl glass rounded-[24px] transition-all duration-500 hover:shadow-2xl hover:shadow-white/5">
-      <div className="flex items-center gap-3 group cursor-pointer">
+    <nav className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-10 py-6 mx-auto max-w-7xl">
+
+      <a href="#" className="flex items-center gap-3 group">
         <Logo />
-        <span className="text-xl font-bold tracking-tighter">AIMEE</span>
-      </div>
+        <span className="text-sm font-black tracking-tighter text-gray-900 uppercase">Aimee</span>
+      </a>
 
-      <div className="hidden md:flex items-center">
-        <ul className="flex gap-12 list-none m-0 p-0">
-          {[
-            { id: 'Portfolio', label: 'Work' },
-            { id: 'Resume',    label: 'Resume' },
-            { id: 'Skills',    label: 'Stack' },
-          ].map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className="text-xs font-bold uppercase tracking-[0.2em] text-accent-muted hover:text-white transition-all duration-300 relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="flex items-center gap-6">
-        <div className="flex gap-5">
-          {[
-            { icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/jolie-a-igena-35a234401/' },
-            { icon: 'mdi:github', url: 'https://github.com/Jolieigena' }
-          ].map((social, i) => (
+      <ul className="hidden md:flex gap-10 list-none m-0 p-0">
+        {[
+          { id: 'Portfolio', label: 'Work' },
+          { id: 'Resume',    label: 'Resume' },
+          { id: 'Skills',    label: 'Stack' },
+        ].map((item) => (
+          <li key={item.id}>
             <a
-              key={i}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-muted hover:text-white transition-all duration-300 hover:scale-110"
+              href={`#${item.id}`}
+              className="font-mono text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-gray-900 transition-colors duration-300"
             >
-              <Icon icon={social.icon} width="22" height="22" />
+              {item.label}
             </a>
-          ))}
-        </div>
-        <div className="h-5 w-px bg-white/10 mx-1"></div>
-        <a href="mailto:igenajolie@gmail.com" className="bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.15em] hover:bg-white/90 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-white/10">
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex items-center gap-5">
+        {[
+          { icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/jolie-a-igena-35a234401/' },
+          { icon: 'mdi:github',   url: 'https://github.com/Jolieigena' },
+        ].map((social, i) => (
+          <a
+            key={i}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-900 transition-colors duration-300"
+          >
+            <Icon icon={social.icon} width="20" height="20" />
+          </a>
+        ))}
+
+        <div className="h-4 w-px bg-black/10 mx-1" />
+
+        <a
+          href="mailto:igenajolie@gmail.com"
+          className="font-mono bg-black text-white px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.15em] hover:bg-blue-600 transition-colors duration-300"
+        >
           Let's Build
         </a>
       </div>
