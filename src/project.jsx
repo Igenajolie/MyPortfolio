@@ -7,10 +7,126 @@ import huzacadDashboard from './assets/huzacad-screenshot.png';
 import ivrLanding from './assets/IVR Landing Page.png';
 import smartschoolDashboard from './assets/smartschool-dashboard.png';
 import huzaflixDashboard from './assets/UserDashBoard.png';
+
+// Extracted Huzaflix Screens
+import hf14 from './assets/huzaflix-screen-14.png';
+import hf13 from './assets/huzaflix-screen-13.png';
+import hf10 from './assets/huzaflix-screen-10.png';
+import hf11 from './assets/huzaflix-screen-11.png';
+import hf7 from './assets/huzaflix-screen-7.png';
+
+// Extracted LMS Screens
+import lmsDashboard from './assets/lms-dashboard.png';
+import lmsSandbox from './assets/lms-sandbox.png';
+import lmsCourseBuilder from './assets/lms-course-builder.png';
+import lmsCourses from './assets/lms-courses.png';
+
+// Extracted HuzaGRID Screens
+import hgDashboard from './assets/huzagrid-dashboard-full.png';
+import hgTopology from './assets/huzagrid-topology.png';
+
 import CaseStudyModal from './CaseStudyModal.jsx';
+
+const ArrowUpRight = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeCaseStudy, setActiveCaseStudy] = useState(null);
+
+  const caseStudyData = {
+    huzaflix: {
+      title: "Huzaflix API Ecosystem",
+      headline: "Architecting the future of API marketplaces.",
+      subheadline: "A deep dive into transforming a complex, developer-heavy platform into a seamless, accessible marketplace for businesses and creators.",
+      role: "BA & Lead Product Designer",
+      timeline: "12 Weeks",
+      platform: "Web Application",
+      deliverables: "UX/UI, Wireframes, Strategy",
+      impactStatement: "Reduced integration time by 60% through an intuitive self-service portal.",
+      images: { heroMain: hf14, heroSecondary: hf13 },
+      sections: [
+        {
+          title: "Balancing complexity with elegant simplicity.",
+          paragraphs: [
+            "API platforms are inherently complex. They require managing keys, tracking latency, monitoring spend, and setting up strict security protocols.",
+            "The primary business requirement was to create an ecosystem that felt as easy to use as Netflix, while providing enterprise-grade analytics to the engineers actually integrating the services."
+          ],
+          image: hf10
+        },
+        {
+          title: "Designing for Trust & Security",
+          paragraphs: [
+            "Trust is the currency of any API marketplace. We completely overhauled the security settings, ensuring that Two-Factor Authentication (2FA) and access revocation were front and center, never buried in nested menus."
+          ],
+          cardTitle: "Frictionless 2FA",
+          cardText: "A seamless authentication flow that ensures security without frustrating the developer.",
+          imageSmall: hf11,
+          imageLarge: hf7
+        }
+      ]
+    },
+    lms: {
+      title: "NCSA Learning Management",
+      headline: "Empowering instructors with intuitive tools.",
+      subheadline: "Revamping the National Cyber Security Academy's learning portal to enhance course creation, lab management, and student tracking.",
+      role: "Product Designer",
+      timeline: "8 Weeks",
+      platform: "Web Platform",
+      deliverables: "UI Design, Dashboard Architecture",
+      impactStatement: "Increased course creation speed by 45% through a unified instructor dashboard.",
+      images: { heroMain: lmsDashboard, heroSecondary: lmsCourses },
+      sections: [
+        {
+          title: "Seamless Course & Lab Creation",
+          paragraphs: [
+            "Instructors previously struggled with disjointed systems for creating courses and managing sandbox environments.",
+            "I designed a streamlined Course Builder and Studio/Sandbox interface that allows instructors to quickly configure learning modules and deploy secure lab environments in just a few clicks."
+          ],
+          image: lmsCourseBuilder
+        },
+        {
+          title: "The Sandbox Environment",
+          paragraphs: [
+            "Cybersecurity training requires secure, isolated environments. We built a 'Studio' where instructors can spin up and monitor active sandboxes for their students in real-time."
+          ],
+          cardTitle: "Live Monitoring",
+          cardText: "Real-time visibility into active student lab environments.",
+          imageSmall: lmsCourses,
+          imageLarge: lmsSandbox
+        }
+      ]
+    },
+    huzagrid: {
+      title: "HuzaGRID",
+      headline: "Unified infrastructure intelligence.",
+      subheadline: "A centralized platform for managing physical and cloud infrastructure across government and enterprise environments.",
+      role: "BA & Lead Product Designer",
+      timeline: "16 Weeks",
+      platform: "Enterprise Web App",
+      deliverables: "Systems Design, UI Architecture",
+      impactStatement: "Reduced mean-time-to-resolution (MTTR) by surfacing critical topology alerts.",
+      images: { heroMain: hgDashboard, heroSecondary: hgTopology },
+      sections: [
+        {
+          title: "Visualizing the Unseen",
+          paragraphs: [
+            "Operations teams were drowning in alerts from disconnected systems. HuzaGRID unifies hardware, network, and cloud telemetry into a single, cohesive dashboard.",
+            "The challenge was presenting immense data density without overwhelming the user."
+          ],
+          image: hgTopology
+        }
+      ]
+    }
+  };
+
+  const openCaseStudy = (key) => {
+    setActiveCaseStudy(caseStudyData[key]);
+    setIsModalOpen(true);
+  };
 
   const featured = {
     title: "HuzaGRID",
@@ -29,6 +145,7 @@ function Projects() {
       year: "2024",
       description: "A learning platform for Rwanda's National Cybersecurity Authority. Conducted stakeholder workshops to define core learning paths and designed a secure, sandboxed lab environment for hands-on training.",
       image: ncsaCatalogue,
+      hasCaseStudy: "lms"
     },
     {
       title: "HuzaNetics",
@@ -64,7 +181,7 @@ function Projects() {
       year: "2024",
       description: "An API marketplace connecting businesses to emerging technologies. Led the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
       image: huzaflixDashboard,
-      caseStudy: true,
+      hasCaseStudy: "huzaflix",
     },
   ];
 
@@ -77,7 +194,6 @@ function Projects() {
       transition={{ duration: 0.8 }}
       className="py-32 px-6 max-w-7xl mx-auto"
     >
-      {/* Section Header */}
       <div className="flex flex-col items-center text-center mb-32 gap-6">
         <span className="font-mono text-[10px] font-black tracking-[0.4em] text-black/40 uppercase bg-gray-100 px-4 py-2 rounded-full">Selected Work</span>
         <h2 className="font-serif text-[clamp(3rem,8vw,5.5rem)] font-bold tracking-tight leading-[1] text-gray-900">
@@ -88,7 +204,6 @@ function Projects() {
         </p>
       </div>
 
-      {/* Featured Project */}
       <div className="group cursor-pointer mb-40">
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[40px] bg-gray-50 shadow-sm border border-black/5 mb-10">
           <img
@@ -125,11 +240,17 @@ function Projects() {
                 </span>
               ))}
             </div>
+            
+            <button 
+              onClick={() => openCaseStudy('huzagrid')}
+              className="mt-6 font-mono px-8 py-4 bg-black text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-colors duration-300"
+            >
+              View Case Study
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Project Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
         {projects.map((project, index) => (
           <div key={index} className="group cursor-pointer">
@@ -148,12 +269,12 @@ function Projects() {
               </div>
               <h3 className="font-serif text-3xl font-bold tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{project.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed font-medium line-clamp-3">{project.description}</p>
-              {project.caseStudy && (
+              {project.hasCaseStudy && (
                 <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="mt-2 font-mono text-[9px] font-black uppercase tracking-widest text-white bg-black px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                  onClick={() => openCaseStudy(project.hasCaseStudy)}
+                  className="mt-6 font-mono px-8 py-4 bg-black text-white rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-colors duration-300"
                 >
-                  View Case Study →
+                  View Case Study
                 </button>
               )}
             </div>
@@ -161,7 +282,7 @@ function Projects() {
         ))}
       </div>
 
-      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} data={activeCaseStudy} />
     </motion.section>
   );
 }
