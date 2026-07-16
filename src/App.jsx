@@ -41,7 +41,7 @@ function App() {
             <div className="flex gap-10">
               {[
                 { label: 'LinkedIn', url: 'https://www.linkedin.com/in/jolie-a-igena-35a234401/' },
-                { label: 'GitHub', url: 'https://github.com' },
+                { label: 'GitHub', url: 'https://github.com/Jolieigena' },
               ].map(link => (
                 <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] font-black uppercase tracking-[0.2em] text-accent-muted hover:text-black transition-all duration-300 relative group pb-1">
                   {link.label}

@@ -32,8 +32,8 @@ function NavBar() {
       <div className="flex items-center gap-6">
         <div className="flex gap-5">
           {[
-            { icon: 'mdi:linkedin', url: 'https://linkedin.com' },
-            { icon: 'mdi:github', url: 'https://github.com' }
+            { icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/jolie-a-igena-35a234401/' },
+            { icon: 'mdi:github', url: 'https://github.com/Jolieigena' }
           ].map((social, i) => (
             <a
               key={i}
