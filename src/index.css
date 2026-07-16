@@ -20,6 +20,10 @@
   --tracking-tighter: -0.05em;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background-color: var(--color-primary);

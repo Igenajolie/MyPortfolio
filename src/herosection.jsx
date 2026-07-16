@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center pt-20 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
       
       {/* Decorative Ambient Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-b from-blue-50/80 to-transparent rounded-full blur-[100px] -z-20"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-gradient-to-b from-blue-50/80 to-transparent rounded-full blur-[80px] -z-20 pointer-events-none"></div>
 
-      <div className="flex flex-col items-center text-center space-y-12 z-10 max-w-4xl mx-auto mt-20">
+      <div className="flex flex-col items-center text-center space-y-12 z-10 max-w-4xl mx-auto">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
