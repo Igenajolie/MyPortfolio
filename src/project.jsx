@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import huzaflixDashboard from './assets/UserDashBoard.png';
-import ncsaCatalogue from './assets/ncsa-lms-catalogue.png';
+import huzagridDashboard from './assets/huzagrid-screenshot.png';
+import ncsaCatalogue from './assets/ncsa instructor dashboardoverview page.png';
+import huzaneticsDashboard from './assets/huzanetics-screenshot.png';
+import huzacadDashboard from './assets/huzacad-screenshot.png';
 import ivrLanding from './assets/IVR Landing Page.png';
-import emergencyMap from './assets/Unit dispatching.png';
-import huzaneticsDashboard from './assets/huzanetics-dashboard.png';
-import triageDashboard from './assets/triage-dashboard.png';
 import smartschoolDashboard from './assets/smartschool-dashboard.png';
+import huzaflixDashboard from './assets/UserDashBoard.png';
 
 const ArrowUpRight = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -15,13 +15,13 @@ const ArrowUpRight = () => (
 
 function Projects() {
   const featured = {
-    title: "Huzaflix Ecosystem",
-    category: "Marketplace Strategy & Design",
-    year: "2024",
+    title: "HuzaGRID",
+    category: "Infrastructure Management · Product Design",
+    year: "2025",
     role: "BA & Lead Product Designer",
-    description: "An API marketplace connecting businesses to emerging technologies. Directed the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
-    image: huzaflixDashboard,
-    tags: ["Business Analysis", "Brand Strategy", "Figma", "Product Design"],
+    description: "A unified platform for managing physical and cloud infrastructure across government and enterprise environments. Led discovery sessions with operations teams, defined the asset lifecycle model, and designed a monitoring dashboard that surfaces critical alerts before they become outages.",
+    image: huzagridDashboard,
+    tags: ["Business Analysis", "Systems Design", "Figma", "Product Design"],
   };
 
   const projects = [
@@ -29,39 +29,53 @@ function Projects() {
       title: "NCSA LMS",
       category: "EdTech · Product Strategy",
       year: "2024",
-      description: "A full learning platform for Rwanda's National Cybersecurity Authority. Conducted stakeholder workshops to define core learning paths and designed a secure, sandboxed lab environment.",
+      description: "A learning platform for Rwanda's National Cybersecurity Authority. Conducted stakeholder workshops to define core learning paths and designed a secure, sandboxed lab environment for hands-on training.",
       image: ncsaCatalogue,
+    },
+    {
+      title: "HuzaNetics",
+      category: "Smart Cities · Mobility Analytics",
+      year: "2025",
+      description: "A real-time mobility analytics platform for city governments — tracking people in motion, active zones, and urban patterns across Kigali. Shaped the product vision and designed the data visualization layer from zero to deployed.",
+      image: huzaneticsDashboard,
+    },
+    {
+      title: "HuzaCAD",
+      category: "Public Safety · UX Research",
+      year: "2024",
+      description: "A computer-aided dispatch system for Rwanda's emergency services. Mapped dispatcher decision flows through on-site user research, then designed the incident tracking, live map, and unit coordination interfaces.",
+      image: huzacadDashboard,
     },
     {
       title: "IVR Platform",
       category: "Telecoms · Brand Identity",
       year: "2023",
-      description: "Designed a clean onboarding flow and visual identity for a complex B2B voice interaction tool, translating complex technical requirements into a simple drag-and-drop user experience.",
+      description: "Designed a clean onboarding flow and visual identity for a B2B voice interaction tool, translating complex telephony requirements into a drag-and-drop user experience that non-technical teams could configure themselves.",
       image: ivrLanding,
-    },
-    {
-      title: "Emergency Response",
-      category: "Public Safety · UX Research",
-      year: "2024",
-      description: "A real-time emergency dispatch system. Led user interviews with dispatchers to map critical decision flows, resulting in a streamlined incident tracking dashboard.",
-      image: emergencyMap,
     },
     {
       title: "SMARTSchool",
       category: "EdTech · Business Strategy",
       year: "2025",
-      description: "Defined the feature roadmap and designed the UX for a full school management ecosystem, balancing the needs of parents, teachers, and administrators into one unified platform.",
+      description: "Defined the feature roadmap and designed the UX for a full school management ecosystem, balancing the distinct needs of parents, teachers, and administrators into one unified platform.",
       image: smartschoolDashboard,
-    }
+    },
+    {
+      title: "Huzaflix Ecosystem",
+      category: "Marketplace Strategy · Design",
+      year: "2024",
+      description: "An API marketplace connecting businesses to emerging technologies. Led the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
+      image: huzaflixDashboard,
+    },
   ];
 
   return (
-    <motion.section 
-      id="Portfolio" 
-      initial={{opacity:0, y:30}} 
-      whileInView={{opacity:1, y:0}} 
-      viewport={{once:true}} 
-      transition={{duration:0.8}} 
+    <motion.section
+      id="Portfolio"
+      initial={{opacity:0, y:30}}
+      whileInView={{opacity:1, y:0}}
+      viewport={{once:true}}
+      transition={{duration:0.8}}
       className="py-32 px-6 max-w-7xl mx-auto"
     >
       {/* Section Header */}
@@ -75,7 +89,7 @@ function Projects() {
         </p>
       </div>
 
-      {/* Featured Project - Dribbble Style (Massive, Edge to edge feel) */}
+      {/* Featured Project */}
       <div className="group cursor-pointer mb-40">
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[40px] bg-gray-50 shadow-sm border border-black/5 mb-10">
           <img
@@ -103,7 +117,7 @@ function Projects() {
           <div className="md:col-span-4 flex flex-col gap-4 md:items-end md:text-right">
             <span className="font-mono text-[10px] font-black uppercase tracking-widest text-black/40">Role</span>
             <span className="font-serif text-lg font-bold text-gray-900">{featured.role}</span>
-            
+
             <span className="font-mono text-[10px] font-black uppercase tracking-widest text-black/40 mt-4">Deliverables</span>
             <div className="flex flex-wrap md:justify-end gap-2">
               {featured.tags.map(tag => (
@@ -116,7 +130,7 @@ function Projects() {
         </div>
       </div>
 
-      {/* Project Grid - Dribbble Style (Large Cards, Huge Gaps) */}
+      {/* Project Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
         {projects.map((project, index) => (
           <div key={index} className="group cursor-pointer">

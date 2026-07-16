@@ -4,12 +4,12 @@ import { Icon } from '@iconify/react';
 function Skills() {
   const skillCategories = [
     {
-      title: "Strategy & Analysis",
+      title: "Frontend Development",
       skills: [
-        { name: "Business Analysis", icon: "mdi:chart-line" },
-        { name: "Product Strategy", icon: "mdi:lightbulb-on-outline" },
-        { name: "Market Research", icon: "mdi:account-search-outline" },
-        { name: "Requirements Gathering", icon: "mdi:clipboard-text-outline" }
+        { name: "React", icon: "logos:react" },
+        { name: "TypeScript", icon: "logos:typescript-icon" },
+        { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+        { name: "Vite", icon: "logos:vitejs" }
       ]
     },
     {
@@ -44,10 +44,10 @@ function Skills() {
       <div className="flex flex-col items-center text-center mb-32 gap-6">
         <span className="font-mono text-[10px] font-black tracking-[0.4em] text-black/40 uppercase bg-gray-100 px-4 py-2 rounded-full">My Arsenal</span>
         <h2 className="font-serif text-[clamp(3rem,8vw,5.5rem)] font-bold tracking-tight text-gray-900 leading-[1]">
-          The Strategic Toolkit.
+          Design & Code.
         </h2>
         <p className="text-lg text-gray-500 max-w-lg leading-relaxed font-medium mt-4">
-          The methodologies and tools I use to define, design, and deliver impactful products.
+          The tools I use to take a product from research and wireframes to shipped, working code.
         </p>
       </div>
 

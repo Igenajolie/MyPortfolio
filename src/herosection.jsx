@@ -16,7 +16,7 @@ function HeroSection() {
           className="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white border border-black/5 shadow-sm"
         >
           <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-          <span className="font-mono text-[10px] font-black tracking-[0.3em] text-black/60 uppercase">Business Analyst, Product Designer & Brand Strategist</span>
+          <span className="font-mono text-[10px] font-black tracking-[0.3em] text-black/60 uppercase">Product Designer & Frontend Developer</span>
         </motion.div>
         
         <motion.h1 
@@ -25,7 +25,7 @@ function HeroSection() {
           transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
           className="font-serif text-[clamp(3.5rem,10vw,7.5rem)] font-extrabold leading-[1] tracking-tight text-gray-900"
         >
-          Shaping <span className="italic text-black/60">Products</span> <br /> & Brands with <span className="text-blue-600">Purpose.</span>
+          Designing it. <br /> <span className="italic text-black/60">Building</span> it <span className="text-blue-600">too.</span>
         </motion.h1>
         
         <motion.p 
@@ -34,7 +34,7 @@ function HeroSection() {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-xl md:text-2xl text-gray-500 max-w-2xl leading-relaxed font-medium"
         >
-          I bridge the gap between business strategy and user experience. From deep market analysis to brand identity and product design, I shape ideas into scalable, real-world solutions.
+          I'm a product designer who writes the code. From early user research and Figma prototypes through to shipped React interfaces — I stay across the full product cycle and own both sides of it.
         </motion.p>
 
         <motion.div 
