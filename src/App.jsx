@@ -70,10 +70,10 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto mt-40 pt-10 border-t border-black/5 flex flex-col md:flex-row justify-between gap-6 font-mono text-[10px] font-black uppercase tracking-[0.3em] text-black/40">
-          <p>© 2026 AIMEE • PRODUCT DESIGNER & BRAND STRATEGIST</p>
+          <p>© 2026 AIMEE • PRODUCT DESIGNER & FRONTEND DEVELOPER</p>
           <div className="flex gap-10">
             <p>KIGALI, RWANDA</p>
-            <p>BA • PRODUCT DESIGN • BRANDING</p>
+            <p>UI/UX • REACT • FRONTEND</p>
           </div>
         </div>
         

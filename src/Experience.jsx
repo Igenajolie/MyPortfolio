@@ -4,10 +4,10 @@ function Resume() {
   const experiences = [
     {
       company: "Huzalabs",
-      role: "Business Analyst & Product Designer",
+      role: "Product Designer & Frontend Developer",
       period: "Jan 2025 — Present",
-      description: "Leading product strategy and design at a fast-growing tech company in Kigali. Bridging the gap between stakeholders and engineering by gathering core business requirements, establishing brand identities, and designing end-to-end user experiences for enterprise systems across cybersecurity, public safety, and telecoms.",
-      highlights: ["Business Analysis", "Brand Strategy", "Figma", "Stakeholder Management", "UX Research"]
+      description: "Designing and building products at a Kigali-based tech company. I own both sides — user research and Figma design through to shipping React interfaces. Products span cybersecurity, public safety, telecoms, and smart cities.",
+      highlights: ["Product Design", "React", "Figma", "Tailwind CSS", "UX Research"]
     }
   ];
 
@@ -27,15 +27,15 @@ function Resume() {
   ];
 
   const competencies = [
-    "Business Analysis",
-    "Product Strategy",
-    "Brand Identity",
-    "UX/UI Design",
-    "User Research",
-    "Requirements Gathering",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
     "Figma",
+    "UI/UX Design",
     "Wireframing",
-    "Stakeholder Management",
+    "Prototyping",
+    "User Research",
+    "Design Systems",
     "Agile / Scrum",
   ];
 
@@ -110,7 +110,7 @@ function Resume() {
                 <div className="mt-12 space-y-4">
                   <p className="font-mono text-[10px] font-black uppercase tracking-[0.3em] text-black/30">Key Deliverables</p>
                   <div className="flex flex-wrap gap-2">
-                    {["NCSA LMS", "Huzaflix", "Emergency Response", "IVR Platform", "Huzanetics", "Smart Triage", "SMARTSchool"].map(p => (
+                    {["HuzaGRID", "HuzaCAD", "HuzaNetics", "NCSA LMS", "IVR Platform", "SMARTSchool", "Huzaflix"].map(p => (
                       <span key={p} className="font-mono text-[10px] font-bold text-gray-700 bg-white border border-black/10 shadow-sm px-4 py-2 rounded-full">
                         {p}
                       </span>
@@ -128,7 +128,7 @@ function Resume() {
 
           {/* Core Competencies */}
           <div>
-            <p className="font-mono text-[10px] font-black uppercase tracking-[0.4em] text-black/30 mb-10">Strategy & Design Skills</p>
+            <p className="font-mono text-[10px] font-black uppercase tracking-[0.4em] text-black/30 mb-10">Design & Frontend Skills</p>
             <div className="flex flex-wrap gap-3">
               {competencies.map(c => (
                 <span key={c} className="font-mono text-[10px] font-black uppercase tracking-widest text-gray-600 bg-white shadow-sm border border-black/5 px-4 py-2 rounded-full cursor-default">
@@ -160,7 +160,7 @@ function Resume() {
               <span className="font-mono text-[10px] font-black uppercase tracking-widest text-black/40">Open to Opportunities</span>
             </div>
             <p className="text-base font-medium text-gray-600 leading-relaxed mb-8">
-              Looking for roles in Product Strategy, Business Analysis, or Brand Design. Based in Kigali, open to remote.
+              Looking for roles in Product Design or Frontend Development. Based in Kigali, open to remote.
             </p>
             <a
               href="mailto:igenajolie@gmail.com"
