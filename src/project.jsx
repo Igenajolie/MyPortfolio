@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import huzagridDashboard from './assets/huzagrid-screenshot.png';
 import ncsaCatalogue from './assets/ncsa instructor dashboardoverview page.png';
 import huzaneticsDashboard from './assets/huzanetics-screenshot.png';
@@ -6,14 +7,11 @@ import huzacadDashboard from './assets/huzacad-screenshot.png';
 import ivrLanding from './assets/IVR Landing Page.png';
 import smartschoolDashboard from './assets/smartschool-dashboard.png';
 import huzaflixDashboard from './assets/UserDashBoard.png';
-
-const ArrowUpRight = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
-  </svg>
-);
+import CaseStudyModal from './CaseStudyModal.jsx';
 
 function Projects() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const featured = {
     title: "HuzaGRID",
     category: "Infrastructure Management · Product Design",
@@ -66,16 +64,17 @@ function Projects() {
       year: "2024",
       description: "An API marketplace connecting businesses to emerging technologies. Led the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
       image: huzaflixDashboard,
+      caseStudy: true,
     },
   ];
 
   return (
     <motion.section
       id="Portfolio"
-      initial={{opacity:0, y:30}}
-      whileInView={{opacity:1, y:0}}
-      viewport={{once:true}}
-      transition={{duration:0.8}}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="py-32 px-6 max-w-7xl mx-auto"
     >
       {/* Section Header */}
@@ -98,7 +97,7 @@ function Projects() {
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700" />
-          <div className="absolute top-8 left-8 flex gap-2">
+          <div className="absolute top-8 left-8">
             <span className="font-mono text-[10px] font-black tracking-widest text-black bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-sm">
               Featured Case Study
             </span>
@@ -149,11 +148,20 @@ function Projects() {
               </div>
               <h3 className="font-serif text-3xl font-bold tracking-tight text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{project.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed font-medium line-clamp-3">{project.description}</p>
+              {project.caseStudy && (
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="mt-2 font-mono text-[9px] font-black uppercase tracking-widest text-white bg-black px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors duration-300"
+                >
+                  View Case Study →
+                </button>
+              )}
             </div>
           </div>
         ))}
       </div>
 
+      <CaseStudyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </motion.section>
   );
 }
