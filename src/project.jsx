@@ -31,6 +31,7 @@ import hgNew4 from './assets/huzagrid-new-4.png';
 // Extracted HuzaNetics Screens
 import hnDashboard from './assets/huzanetics-dashboard.png';
 import hnScreenshot from './assets/huzanetics-screenshot.png';
+import hnMobility from './assets/huzanetics-mobility.png';
 
 import CaseStudyModal from './CaseStudyModal.jsx';
 
@@ -137,7 +138,7 @@ function Projects() {
       platform: "Analytics Dashboard",
       deliverables: "Data Visualization, UX/UI, Dashboard Architecture",
       impactStatement: "Enabled city planners to identify high-traffic zones 3x faster through intuitive heatmaps.",
-      images: { heroMain: hnScreenshot, heroSecondary: hnDashboard },
+      images: { heroMain: hnScreenshot, heroSecondary: hnMobility },
       sections: [
         {
           title: "Making Data Actionable",
