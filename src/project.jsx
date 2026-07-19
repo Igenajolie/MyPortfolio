@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import portfolioData from './data/portfolio.json';
 import huzagridDashboard from './assets/huzagrid-new-1.png';
 import ncsaCatalogue from './assets/ncsa instructor dashboardoverview page.png';
 import huzaneticsDashboard from './assets/huzanetics-screenshot.png';
@@ -26,6 +27,10 @@ import hgNew1 from './assets/huzagrid-new-1.png';
 import hgNew2 from './assets/huzagrid-new-2.png';
 import hgNew3 from './assets/huzagrid-new-3.png';
 import hgNew4 from './assets/huzagrid-new-4.png';
+
+// Extracted HuzaNetics Screens
+import hnDashboard from './assets/huzanetics-dashboard.png';
+import hnScreenshot from './assets/huzanetics-screenshot.png';
 
 import CaseStudyModal from './CaseStudyModal.jsx';
 
@@ -122,6 +127,27 @@ function Projects() {
           image: hgNew3
         }
       ]
+    },
+    huzanetics: {
+      title: "HuzaNetics Analytics",
+      headline: "Real-time mobility & urban insights.",
+      subheadline: "Designing the data visualization layer for a smart city analytics platform that tracks people in motion, active zones, and urban patterns.",
+      role: "Lead Product Designer",
+      timeline: "14 Weeks",
+      platform: "Analytics Dashboard",
+      deliverables: "Data Visualization, UX/UI, Dashboard Architecture",
+      impactStatement: "Enabled city planners to identify high-traffic zones 3x faster through intuitive heatmaps.",
+      images: { heroMain: hnScreenshot, heroSecondary: hnDashboard },
+      sections: [
+        {
+          title: "Making Data Actionable",
+          paragraphs: [
+            "City governments possess massive amounts of movement data but struggle to make it actionable.",
+            "I led the design of a highly visual dashboard that transforms raw tracking data into intuitive heatmaps and metric cards, allowing non-technical policymakers to make immediate infrastructure decisions."
+          ],
+          image: hnDashboard
+        }
+      ]
     }
   };
 
@@ -130,62 +156,25 @@ function Projects() {
     setIsModalOpen(true);
   };
 
-  const featured = {
-    title: "HuzaGRID",
-    category: "Infrastructure Management · Product Design",
-    year: "2025",
-    role: "BA & Lead Product Designer",
-    description: "A unified platform for managing physical and cloud infrastructure across government and enterprise environments. Led discovery sessions with operations teams, defined the asset lifecycle model, and designed a monitoring dashboard that surfaces critical alerts before they become outages.",
-    image: huzagridDashboard,
-    tags: ["Business Analysis", "Systems Design", "Figma", "Product Design"],
+  const imageMap = {
+    "huzagrid-new-1.png": huzagridDashboard,
+    "ncsa instructor dashboardoverview page.png": ncsaCatalogue,
+    "huzanetics-screenshot.png": huzaneticsDashboard,
+    "huzacad-screenshot.png": huzacadDashboard,
+    "IVR Landing Page.png": ivrLanding,
+    "smartschool-dashboard.png": smartschoolDashboard,
+    "UserDashBoard.png": huzaflixDashboard
   };
 
-  const projects = [
-    {
-      title: "NCSA LMS",
-      category: "EdTech · Product Strategy",
-      year: "2024",
-      description: "A learning platform for Rwanda's National Cybersecurity Authority. Conducted stakeholder workshops to define core learning paths and designed a secure, sandboxed lab environment for hands-on training.",
-      image: ncsaCatalogue,
-      hasCaseStudy: "lms"
-    },
-    {
-      title: "HuzaNetics",
-      category: "Smart Cities · Mobility Analytics",
-      year: "2025",
-      description: "A real-time mobility analytics platform for city governments — tracking people in motion, active zones, and urban patterns across Kigali. Shaped the product vision and designed the data visualization layer from zero to deployed.",
-      image: huzaneticsDashboard,
-    },
-    {
-      title: "HuzaCAD",
-      category: "Public Safety · UX Research",
-      year: "2024",
-      description: "A computer-aided dispatch system for Rwanda's emergency services. Mapped dispatcher decision flows through on-site user research, then designed the incident tracking, live map, and unit coordination interfaces.",
-      image: huzacadDashboard,
-    },
-    {
-      title: "IVR Platform",
-      category: "Telecoms · Brand Identity",
-      year: "2023",
-      description: "Designed a clean onboarding flow and visual identity for a B2B voice interaction tool, translating complex telephony requirements into a drag-and-drop user experience that non-technical teams could configure themselves.",
-      image: ivrLanding,
-    },
-    {
-      title: "SMARTSchool",
-      category: "EdTech · Business Strategy",
-      year: "2025",
-      description: "Defined the feature roadmap and designed the UX for a full school management ecosystem, balancing the distinct needs of parents, teachers, and administrators into one unified platform.",
-      image: smartschoolDashboard,
-    },
-    {
-      title: "Huzaflix Ecosystem",
-      category: "Marketplace Strategy · Design",
-      year: "2024",
-      description: "An API marketplace connecting businesses to emerging technologies. Led the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
-      image: huzaflixDashboard,
-      hasCaseStudy: "huzaflix",
-    },
-  ];
+  const featured = {
+    ...portfolioData.featured,
+    image: imageMap[portfolioData.featured.image] || portfolioData.featured.image,
+  };
+
+  const projects = portfolioData.projects.map(p => ({
+    ...p,
+    image: imageMap[p.image] || p.image
+  }));
 
   return (
     <motion.section

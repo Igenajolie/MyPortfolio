@@ -1,0 +1,66 @@
+{
+  "featured": {
+    "title": "HuzaGRID",
+    "category": "Infrastructure Management · Product Design",
+    "year": "2025",
+    "role": "BA & Lead Product Designer",
+    "description": "A unified platform for managing physical and cloud infrastructure across government and enterprise environments. Led discovery sessions with operations teams, defined the asset lifecycle model, and designed a monitoring dashboard that surfaces critical alerts before they become outages.",
+    "image": "huzagrid-new-1.png",
+    "tags": [
+      "Business Analysis",
+      "Systems Design",
+      "Figma",
+      "Product Design"
+    ]
+  },
+  "projects": [
+    {
+      "title": "NCSA LMS",
+      "category": "EdTech · Product Strategy",
+      "year": "2024",
+      "description": "A learning platform for Rwanda's National Cybersecurity Authority. Conducted stakeholder workshops to define core learning paths and designed a secure, sandboxed lab environment for hands-on training.",
+      "image": "ncsa instructor dashboardoverview page.png",
+      "hasCaseStudy": "lms"
+    },
+    {
+      "title": "HuzaNetics",
+      "category": "Smart Cities · Mobility Analytics",
+      "year": "2025",
+      "description": "A real-time mobility analytics platform for city governments — tracking people in motion, active zones, and urban patterns across Kigali. Shaped the product vision and designed the data visualization layer from zero to deployed.",
+      "image": "huzanetics-screenshot.png",
+      "hasCaseStudy": "huzanetics"
+    },
+    {
+      "title": "HuzaCAD",
+      "category": "Public Safety · UX Research",
+      "year": "2024",
+      "description": "A computer-aided dispatch system for Rwanda's emergency services. Mapped dispatcher decision flows through on-site user research, then designed the incident tracking, live map, and unit coordination interfaces.",
+      "image": "huzacad-screenshot.png",
+      "hasCaseStudy": null
+    },
+    {
+      "title": "IVR Platform",
+      "category": "Telecoms · Brand Identity",
+      "year": "2023",
+      "description": "Designed a clean onboarding flow and visual identity for a B2B voice interaction tool, translating complex telephony requirements into a drag-and-drop user experience that non-technical teams could configure themselves.",
+      "image": "IVR Landing Page.png",
+      "hasCaseStudy": null
+    },
+    {
+      "title": "SMARTSchool",
+      "category": "EdTech · Business Strategy",
+      "year": "2025",
+      "description": "Defined the feature roadmap and designed the UX for a full school management ecosystem, balancing the distinct needs of parents, teachers, and administrators into one unified platform.",
+      "image": "smartschool-dashboard.png",
+      "hasCaseStudy": null
+    },
+    {
+      "title": "Huzaflix Ecosystem",
+      "category": "Marketplace Strategy · Design",
+      "year": "2024",
+      "description": "An API marketplace connecting businesses to emerging technologies. Led the business requirements gathering, market positioning, and full product design lifecycle — cutting integration time by 60%.",
+      "image": "UserDashBoard.png",
+      "hasCaseStudy": "huzaflix"
+    }
+  ]
+}
