@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const MacBookMockup = ({ children, className = "" }) => (
   <div className={`relative flex flex-col items-center ${className}`}>
     {/* Screen Top Lid */}
-    <div className="relative w-full rounded-t-[1.5rem] bg-[#111] p-3 sm:p-4 shadow-2xl border-t border-white/20 border-b border-[#333] z-10" style={{ aspectRatio: '16/10' }}>
+    <div className="relative w-full rounded-t-[1.5rem] bg-[#111] p-3 sm:p-4 shadow-2xl border-t border-white/20 border-b border-[#333] z-10 aspect-[16/10]">
       {/* Camera Notch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 sm:w-24 h-4 bg-[#111] rounded-b-[0.5rem] z-20 flex justify-center items-center">
         <div className="w-1.5 h-1.5 rounded-full bg-white/10 flex items-center justify-center">
@@ -14,7 +14,7 @@ const MacBookMockup = ({ children, className = "" }) => (
       </div>
       
       {/* Screen Content Wrapper */}
-      <div className="relative w-full h-full bg-black rounded-[0.5rem] overflow-hidden">
+      <div className="absolute top-3 bottom-3 left-3 right-3 sm:top-4 sm:bottom-4 sm:left-4 sm:right-4 bg-black rounded-[0.5rem] overflow-hidden">
         {children}
       </div>
     </div>
@@ -29,11 +29,11 @@ const MacBookMockup = ({ children, className = "" }) => (
 
 // iPad Pro Mockup Component
 const IPadMockup = ({ children, className = "" }) => (
-  <div className={`relative rounded-[2rem] bg-[#111] p-3 sm:p-4 shadow-2xl border border-white/10 ${className}`} style={{ aspectRatio: '3/4' }}>
+  <div className={`relative rounded-[2rem] bg-[#111] shadow-2xl border border-white/10 aspect-[3/4] ${className}`}>
     {/* Front Camera */}
     <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white/10 z-20"></div>
     {/* Screen */}
-    <div className="relative w-full h-full bg-black rounded-[1.2rem] overflow-hidden">
+    <div className="absolute top-3 bottom-3 left-3 right-3 sm:top-4 sm:bottom-4 sm:left-4 sm:right-4 bg-black rounded-[1.2rem] overflow-hidden">
       {children}
     </div>
   </div>

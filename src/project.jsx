@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import huzagridDashboard from './assets/huzagrid-screenshot.png';
+import huzagridDashboard from './assets/huzagrid-new-1.png';
 import ncsaCatalogue from './assets/ncsa instructor dashboardoverview page.png';
 import huzaneticsDashboard from './assets/huzanetics-screenshot.png';
 import huzacadDashboard from './assets/huzacad-screenshot.png';
@@ -22,8 +22,10 @@ import lmsCourseBuilder from './assets/lms-course-builder.png';
 import lmsCourses from './assets/lms-courses.png';
 
 // Extracted HuzaGRID Screens
-import hgDashboard from './assets/huzagrid-dashboard-full.png';
-import hgTopology from './assets/huzagrid-topology.png';
+import hgNew1 from './assets/huzagrid-new-1.png';
+import hgNew2 from './assets/huzagrid-new-2.png';
+import hgNew3 from './assets/huzagrid-new-3.png';
+import hgNew4 from './assets/huzagrid-new-4.png';
 
 import CaseStudyModal from './CaseStudyModal.jsx';
 
@@ -109,7 +111,7 @@ function Projects() {
       platform: "Enterprise Web App",
       deliverables: "Systems Design, UI Architecture",
       impactStatement: "Reduced mean-time-to-resolution (MTTR) by surfacing critical topology alerts.",
-      images: { heroMain: hgDashboard, heroSecondary: hgTopology },
+      images: { heroMain: hgNew1, heroSecondary: hgNew2 },
       sections: [
         {
           title: "Visualizing the Unseen",
@@ -117,7 +119,7 @@ function Projects() {
             "Operations teams were drowning in alerts from disconnected systems. HuzaGRID unifies hardware, network, and cloud telemetry into a single, cohesive dashboard.",
             "The challenge was presenting immense data density without overwhelming the user."
           ],
-          image: hgTopology
+          image: hgNew3
         }
       ]
     }
