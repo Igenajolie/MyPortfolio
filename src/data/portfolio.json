@@ -47,11 +47,11 @@
       "hasCaseStudy": null
     },
     {
-      "title": "SMARTSchool",
-      "category": "EdTech · Business Strategy",
-      "year": "2025",
-      "description": "Defined the feature roadmap and designed the UX for a full school management ecosystem, balancing the distinct needs of parents, teachers, and administrators into one unified platform.",
-      "image": "smartschool-dashboard.png",
+      "title": "EnergyIQ",
+      "category": "Smart Home IoT · Machine Learning",
+      "year": "2026",
+      "description": "An AI-powered smart home energy monitoring system. Simulates an IoT environment and applies a Random Forest model to classify real-time power consumption, automatically cutting power to wasteful appliances.",
+      "image": "energyiq-dashboard.png",
       "hasCaseStudy": null
     },
     {
