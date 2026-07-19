@@ -7,7 +7,6 @@ import huzaneticsDashboard from './assets/huzanetics-screenshot.png';
 import huzacadDashboard from './assets/huzacad-screenshot.png';
 import ivrLanding from './assets/IVR Landing Page.png';
 import smartschoolDashboard from './assets/smartschool-dashboard.png';
-import energyiqDashboard from './assets/energyiq-dashboard.png';
 import huzaflixDashboard from './assets/UserDashBoard.png';
 
 // Extracted Huzaflix Screens
@@ -165,7 +164,6 @@ function Projects() {
     "huzacad-screenshot.png": huzacadDashboard,
     "IVR Landing Page.png": ivrLanding,
     "smartschool-dashboard.png": smartschoolDashboard,
-    "energyiq-dashboard.png": energyiqDashboard,
     "UserDashBoard.png": huzaflixDashboard
   };
 
